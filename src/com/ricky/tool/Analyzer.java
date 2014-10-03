@@ -35,6 +35,7 @@ public class Analyzer {
 		
 		String[] frequencyStrings = new String[MainWindow.FREQUENCY_LABEL_SIZE];
 		// if all the count are 0, result a string array of 16 '00.00'
+		// else computing the percentage of all the characters
 		if(countAll == 0) {
 			for(int i=0; i<frequencyStrings.length; i++) {
 				frequencyStrings[i] = numberFormat.format(0);

@@ -17,6 +17,13 @@ public class Substitutor {
 	public static String substitute(char[] subChs, String cipherText) {
 		String lowerCipherText = cipherText.toLowerCase();
 		char[] cipherChs = lowerCipherText.toCharArray();
+		// all the substitution part will be shown in high case
+		for(int i=0; i<subChs.length; i++) {
+			if(subChs[i] >= 'a' && subChs[i] <= 'z'){
+				subChs[i] += 'A' - 'a';
+			}
+		}
+		// replace the characters
 		for(int i=0; i<cipherChs.length; i++) {
 			char ch = cipherChs[i];
 			if(ch >= 'a' && ch <= 'z' && subChs[ch-'a'] != MainWindow.NULL_CHAR) {
